@@ -2,9 +2,11 @@ package com.bignerdranch.android.criminalintent
 
 import android.support.v4.app.Fragment
 
-class CrimeActivity : SingleFragmentActivity() {
-
+/**
+ * @author Artem Nekrasov
+ */
+class CrimeListActivity : SingleFragmentActivity() {
     override fun createFragment(): Fragment {
-        return CrimeFragment()
+        return CrimeListFragment()
     }
 }
