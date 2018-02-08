@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 
 /**
  * @author Artem Nekrasov
@@ -49,6 +50,12 @@ class CrimeListFragment : Fragment() {
         private var mTitleTextView: TextView = itemView.findViewById(R.id.crime_title)
         private var mDateTextView: TextView = itemView.findViewById(R.id.crime_date)
         private lateinit var mCrime: Crime
+
+        init {
+            itemView.setOnClickListener {
+                Toast.makeText(itemView.context, mCrime.title, Toast.LENGTH_SHORT).show()
+            }
+        }
 
         fun bind(crime: Crime) {
             mCrime = crime
